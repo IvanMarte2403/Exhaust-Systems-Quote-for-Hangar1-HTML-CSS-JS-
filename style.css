@@ -1,0 +1,165 @@
+
+:root{
+    --color-principal: #000;
+    --color-secundario: #e51e52;
+    --tamaño-titulo: 3.2rem;
+    --tamaño-texto: 1.5rem;
+    --tamaño-subitutlo: 1.5rem;
+    --padding-contenedor: 2rem;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    overscroll-behavior: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html,body{
+    font-family: Montserrat;
+    height: auto;
+    overflow-y:auto;
+    overflow-x: hidden;
+}
+
+
+
+/* ==========Productos Cotizador=========== */
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========Selector de Tipo De Auto=========== */
+#tipoAuto{
+    margin-top: 5vh;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    border: 3px solid var(--color-secundario);
+    color: var(--color-secundario);
+    font-weight: 600;
+}
+
+/* =======Productos Cotizador======= */
+
+.productos-cotizador{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.productos-cotizador div{
+    padding: 2rem;
+}
+
+.productos-cotizador a{
+    padding: 2rem;
+}
+
+
+/* ========Modal============== */
+
+.modal-contenedor{
+    padding: var(--padding-contenedor);
+    border: 4px  solid var(--color-principal);
+    border-radius: 2rem;
+}
+
+.modal-titulo{
+    display: flex;   
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-titulo h2{
+    width: 60%;
+    font-size: var(--tamaño-subitutlo);
+    color: var(--color-secundario);
+    text-align: center;
+    font-weight:800;
+}
+
+#modal-cotizacion{
+    margin-top: 6vh;
+
+}
+
+.contenedor-botones-cotizador{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenedor-botones-cotizador a{
+    text-decoration: none;
+    margin-top: 5vh;
+    padding: 1rem 2rem;
+    font-weight: 700;
+}
+
+.contenedor-botones-cotizador a:hover{
+    color: var(--color-secundario);
+}
+
+#imagenes-cotizacion{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.producto-columna{
+    display: flex;
+    margin-top: 5vh;
+    align-items: center;
+}
+
+.producto-columna img{
+    padding: 1rem;
+    width: 30%;
+}
+
+.producto-columna p{
+    padding: 0.5rem;
+}
+
+.producto-columna i{
+    padding: 2rem;
+    color: var(--color-secundario);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* =================Boton Cotizar============== */
+
+.boton-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-container a{
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 3px solid var(--color-secundario);
+    border-radius: 1rem;
+    font-weight: 600;;
+}
+
+

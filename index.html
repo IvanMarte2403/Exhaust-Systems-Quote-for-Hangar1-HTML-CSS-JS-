@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Cotizador Hangar1 </title>
+</head>
+<body>
+    <select name="tipoAuto" id="tipoAuto">
+        <option value="Godin">Godin</option>
+        <option value="Sedan">Sedan</option>
+        <option value="Deportivo">Deportivo</option>
+        <option value="Hatchback">Hatchback</option>
+    </select> 
+
+    <div class="productos-cotizador">
+        <div>
+            <a href="" class="producto-terminales" id="producto-terminales">
+                <img src="img/terrminales-de-escape.png" alt="">
+            </a>
+            <a href="" class="producto-sistema-de-escape" id="producto-sistema-de-escape">
+                <img src="img/sistema-de-escape.png" alt="">
+            </a>
+            <a href="" class="producto-crossover" id="producto-crossover">
+                <img src="img/x-pipe.png" alt="">
+            </a>
+            <a href="" class="producto-downpipe" id="producto-downpipe">
+                <img src="img/dowpipe.png" alt="">
+            </a>
+         
+        </div>
+
+        <div>
+            <a href="" class="producto-silenciador" id="producto-silenciador">
+                <img src="img/silenciador-de-alto-fñujo.png" alt="">
+            </a>
+            <a href="" class="resonador-de-alto-flujo" id="producto-resonador">
+                <img src="img/resonadores-de-alto-flujo.png" alt="">
+            </a>
+            <a href="" class="juntas-flexibles" id="juntas-flexibles">
+                <img src="img/Juntas-Flexibles.png" alt="">
+            </a>
+            <a href="" class="producto-headers" id="producto-headers">
+                <img src="img/headers.png" alt="">
+            </a>
+            
+        </div>
+       
+       
+    
+    </div>
+
+    <div class="boton-container">
+        <a href="" id="boton-cotizar">Escuchar & Cotizar</a>
+    </div>
+
+    <!-- ===================Modales============== -->
+
+    <!-- ===========Modales Godines============= -->
+
+    <!-- ========Modal de Terminales de Escape====== -->
+    <div id="modal-Godin-producto-terminales" style="display: none;" class="modal-contenedor modal">
+        <div class="modal-titulo">
+            <img src="img/terrminales-de-escape.png" alt="">
+            <h2>Terminales de Sistema De Escape</h2>
+            
+        </div>
+        <div class="producto-columna">
+            <img src="productos/terminales/terminal-1.png" alt="">
+            <div>
+                <p>Terminal De Sistema de Escape Modelo #1</p>
+                <p>Breve Descripción de 10 palabras</p>
+
+            </div>
+           
+           
+            <i id="terminal-1" class="fas fa-plus"></i> 
+        </div>
+
+        <div class="producto-columna">
+            <img src="productos/terminales/terminal-2.png" alt="">
+            <div>
+                <p>Terminal De Sistema de Escape Modelo #1</p>
+                <p>Breve Descripción de 10 palabras</p>
+
+            </div>
+           
+           
+            <i id="terminal-2" class="fas fa-plus"></i> 
+        </div>
+    </div>
+
+    
+    <!-- ============Modal Sistema De Escape ======= -->
+    <div id="modal-Godin-producto-sistema-de-escape" style="display: none;" class="modal-contenedor modal">
+        <div class="modal-titulo">
+            <img src="img/sistema-de-escape.png" alt="">
+            <h2>Sistemas de Escape</h2>
+            
+        </div>
+        <div class="producto-columna">
+            <img src="productos/sistema-de-escape/sistema-de-escape-1.png" alt="">
+            <div>
+                <p>Sistema de Escape Catback</p>
+                <p>Breve Descripción de 10 palabras</p>
+
+            </div>
+           
+           
+            <i id="sistema-de-escape-1" class="fas fa-plus"></i> 
+        </div>
+
+        <div class="producto-columna">
+            <img src="productos/sistema-de-escape/sistema-de-escape-2.png" alt="">
+            <div>
+                <p>Sistema de Escape Axle Back</p>
+                <p>Breve Descripción de 10 palabras</p>
+
+            </div>
+           
+           
+            <i id="sistema-de-escape-2" class="fas fa-plus"></i> 
+        </div>
+    </div>
+
+
+  
+
+    <!-- ================Modal CrossOver============== -->
+    <div id="modal-Godin-producto-crossover" style="display: none;" class="modal-contenedor modal">
+        <div class="modal-titulo">
+            <img src="img/sistema-de-escape.png" alt="">
+            <h2>CrossOver</h2>
+            
+        </div>
+        <div class="producto-columna">
+            <img src="productos/crossover/crossover-1.png" alt="">
+            <div>
+                <p>X - Pipe </p>
+                <p>Breve Descripción de 10 palabras</p>
+
+            </div>
+           
+           
+            <i id="crossover-1" class="fas fa-plus"></i> 
+        </div>
+
+        <div class="producto-columna">
+            <img src="productos/crossover/crossover-2.png" alt="">
+            <div>
+                <p>H - pipe</p>
+                <p>Breve Descripción de 10 palabras</p>
+
+            </div>
+           
+           
+            <i id="crossover-2" class="fas fa-plus"></i> 
+        </div>
+    </div>
+
+    <!-- ======Modal Cotizacion======= -->
+
+    <div id="modal-cotizacion" class="modal-contenedor" style="display: none;">
+        <div id="imagenes-cotizacion">
+            <!-- Aquí se insertarán las imágenes -->
+        </div>
+        <div class="contenedor-botones-cotizador">
+            <a href="" id="cotizar-mensaje">COTIZAR</a>
+            <a href="" id="cotizar-sonido">ESCUCHAR</a>
+        </div>
+    </div>
+
+</body>
+
+<script src="main.js"></script>
+</html>
