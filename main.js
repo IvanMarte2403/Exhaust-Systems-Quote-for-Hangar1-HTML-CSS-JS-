@@ -197,3 +197,40 @@ document.getElementById('boton-cotizar').addEventListener('click', function(e) {
     // Muestra el modal de cotización
     document.getElementById('modal-cotizacion').style.display = 'block';
 });
+
+
+
+// ========Cotizar Mensaje=============
+
+// ======Variables De Productos======
+
+var nombresProductos = {
+    'terminal-1': 'Terminal Hangar1Personalizado',
+    'terminal-2': 'Terminal Hangar1 Personalizado',
+    'sistema-escape-1': 'Cat-back',
+    'sistema-escape-2' : 'Axle Back',
+    'crossover-1': 'X- Pipe',
+    'crossover-2': 'H-Pipe',
+};
+
+document.getElementById('cotizar-mensaje').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // Genera el mensaje con los productos seleccionados
+    var mensaje = '¡Arme el siguiente sistema de Escape para mi coche:\n';
+    for (var producto in sistemaDeEscape) {
+        if (producto !== 'segmentoCoche' && sistemaDeEscape[producto]) {
+            var nombreProducto = nombresProductos[sistemaDeEscape[producto]] || sistemaDeEscape[producto];
+            mensaje += producto + ': ' + nombreProducto + '\n';
+        }
+    }
+
+    // Codifica el mensaje para usarlo en una URL
+    var mensajeCodificado = encodeURIComponent(mensaje);
+
+    // Genera el enlace a la API de WhatsApp
+    var enlaceWhatsApp = 'https://api.whatsapp.com/send?phone=5528996428&text=' + mensajeCodificado;
+
+    // Abre el enlace en una nueva pestaña
+    window.open(enlaceWhatsApp, '_blank');
+});
