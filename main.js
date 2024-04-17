@@ -234,3 +234,33 @@ document.getElementById('cotizar-mensaje').addEventListener('click', function(e)
     // Abre el enlace en una nueva pestaña
     window.open(enlaceWhatsApp, '_blank');
 });
+
+
+
+
+
+// ========Funciones de Sonido=========
+
+document.getElementById('cotizar-sonido').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // Selecciona el archivo de audio basado en el valor de segmentoCoche
+    var archivoAudio;
+    switch (sistemaDeEscape.segmentoCoche) {
+        case 'Godin':
+            archivoAudio = 'sonidos/godin/axle-back.mp3 ';
+            break;
+        case 'Sedan':
+            archivoAudio = 'ruta/al/archivo/de/audio2.mp3';
+            break;
+        // Agrega aquí los demás casos si los necesitas
+        default:
+            archivoAudio = 'ruta/al/archivo/de/audioDefault.mp3';
+    }
+
+    // Crea un nuevo objeto Audio y carga el archivo de audio
+    var sonido = new Audio(archivoAudio);
+
+    // Reproduce el sonido
+    sonido.play();
+});
