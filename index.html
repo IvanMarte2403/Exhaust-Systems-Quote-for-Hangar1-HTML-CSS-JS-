@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Cotizador Hangar1 </title>
 </head>
+
+    <!--
+            =======INSTRUCCIONES=========
+        
+        Instrucciones para agregar una CATEGORIA al cotizador:
+    -Agregar un Modal de Categoria 
+    -Agregar los productos en producto-columna
+    -En main.js en la variable 'nombresProductos', agregar el id del producto y el nombre que se le asigna 
+    -Rutas Imagenes: Agregar por categoria 'productos/direccion de imagen
+    -Cambiar el ID de Productos: En los Modales 
+    ' -->
 <body>
     <select name="tipoAuto" id="tipoAuto">
         <option value="Godin">Godin</option>
@@ -28,6 +39,9 @@
             </a>
             <a href="" class="producto-downpipe" id="producto-downpipe">
                 <img src="img/dowpipe.png" alt="">
+            </a>
+            <a href="" class="producto-catalizadores-de-alto-flujo" id="producto-catalizadores-de-alto-flujo">
+                <img src="img/catalizador-de-alto-flujoi.png" alt="">
             </a>
          
         </div>
@@ -55,6 +69,7 @@
     <div class="boton-container">
         <a href="" id="boton-cotizar">Escuchar & Cotizar</a>
     </div>
+
 
     <!-- ===================Modales============== -->
 
@@ -126,8 +141,6 @@
     </div>
 
 
-  
-
     <!-- ================Modal CrossOver============== -->
     <div id="modal-Godin-producto-crossover" style="display: none;" class="modal-contenedor modal">
         <div class="modal-titulo">
@@ -160,6 +173,72 @@
         </div>
     </div>
 
+    <!-- =================Modal Downpipe================== -->
+
+    <div id="modal-Godin-producto-downpipe" style="display: none;" class="modal-contenedor modal">
+        <div class="modal-titulo">
+            <img src="img/sistema-de-escape.png" alt="">
+            <h2>DownPipe</h2>
+            
+        </div>
+        <div class="producto-columna">
+            <img src="productos/crossover/crossover-1.png" alt="">
+            <div>
+                <p>X - Pipe </p>
+                <p>Breve Descripción de 10 palabras</p>
+
+            </div>
+           
+           
+            <i id="downpipe-1" class="fas fa-plus"></i> 
+        </div>
+
+        <div class="producto-columna">
+            <img src="productos/crossover/crossover-2.png" alt="">
+            <div>
+                <p>downpipe-2</p>
+                <p>Breve Descripción de 10 palabras</p>
+
+            </div>
+           
+           
+            <i id="downpipe-2" class="fas fa-plus"></i> 
+        </div>
+    </div>
+
+    <!-- =====================Modal Catalizadores========== -->
+    <div id="modal-Godin-producto-catalizadores-de-alto-flujo" style="display: none;" class="modal-contenedor modal">
+
+        <div class="modal-titulo">
+            <img src="img/sistema-de-escape.png" alt="">
+            <h2>Catalizadores de Alto Flujo</h2>
+            
+        </div>
+        <div class="producto-columna">
+            <img src="productos/catalizadores/catalizador-1.png" alt="">
+            <div>
+                <p>Catalizador Marca 1</p>
+                <p>Breve Descripción de 10 palabras</p>
+
+            </div>
+           
+           
+            <i id="catalizador-1" class="fas fa-plus"></i> 
+        </div>
+
+        <div class="producto-columna">
+            <img src="productos/catalizadores/catalizador-2.png" alt="">
+            <div>
+                <p>Catalizador Marca 2 </p>
+                <p>Breve Descripción de 10 palabras</p>
+
+            </div>
+           
+           
+            <i id="catalizador-2" class="fas fa-plus"></i> 
+        </div>
+    </div>
+    
     <!-- ======Modal Cotizacion======= -->
 
     <div id="modal-cotizacion" class="modal-contenedor" style="display: none;">
@@ -172,7 +251,8 @@
         </div>
     </div>
 
-</body>
 
+</body>
 <script src="main.js"></script>
-</html>
+<script src="modal/modal-godin.js"></script>
+</html> 

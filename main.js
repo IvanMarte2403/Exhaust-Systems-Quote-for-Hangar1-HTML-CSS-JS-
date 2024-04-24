@@ -8,6 +8,7 @@ var sistemaDeEscape = {
     segmentoCoche: document.getElementById('tipoAuto').value,
     terminalEscape: null,
     sistemaEscape: null,
+    catalizador: null,
     crossOver: null,
     downpipe: null,
     silenciador: null,
@@ -87,7 +88,6 @@ enlaces.forEach(function(enlace) {
         });
     });
 
-    var iconosSistemaDeEscape = document.querySelectorAll('#modal-Godin-producto-sistema-de-escape i');
 
     var iconoSistemaDeEscape = document.querySelectorAll('#modal-Godin-producto-sistema-de-escape i');
 
@@ -117,42 +117,11 @@ iconoSistemaDeEscape.forEach(function(icono) {
             icono.classList.add('fa-check');
             icono.style.color = 'green';
         }
-    });
+    }); 
 });
 
 
-// ==========Crossoverr==========
 
-var iconosCrossOver = document.querySelectorAll('#modal-Godin-producto-crossover i');
-
-iconosCrossOver.forEach(function(icono) {
-    icono.addEventListener('click', function() {
-        // Obten el id del icono
-        var idIcono = icono.id;
-
-        // Si el producto ya fue seleccionado, deseleccionarlo
-        if (sistemaDeEscape.crossOver === idIcono) {
-            sistemaDeEscape.crossOver = null;
-            icono.classList.remove('fa-check');
-            icono.classList.add('fa-plus');
-            icono.style.color = '';
-        } else {
-            // Si otro producto fue seleccionado previamente, deseleccionarlo
-            if (sistemaDeEscape.crossOver) {
-                var iconoAnterior = document.getElementById(sistemaDeEscape.crossOver);
-                iconoAnterior.classList.remove('fa-check');
-                iconoAnterior.classList.add('fa-plus');
-                iconoAnterior.style.color = '';
-            }
-
-            // Seleccionar el nuevo producto
-            sistemaDeEscape.crossOver = idIcono;
-            icono.classList.remove('fa-plus');
-            icono.classList.add('fa-check');
-            icono.style.color = 'green';
-        }
-    });
-});
 
 
 
@@ -160,7 +129,8 @@ iconosCrossOver.forEach(function(icono) {
 var rutasImagenes = {
     terminalEscape: 'productos/terminales/',
     sistemaEscape: 'productos/sistema-de-escape/',
-    crossOver: 'productos/crossover/'
+    crossOver: 'productos/crossover/',
+    catalizador: 'productos/catalizadores/'
     // Agrega aquí las rutas para las demás propiedades si las necesitas
 };
 
@@ -168,7 +138,7 @@ document.getElementById('boton-cotizar').addEventListener('click', function(e) {
     e.preventDefault();
 
     // Verifica si al menos una de las propiedades requeridas no es nula
-    if (!sistemaDeEscape.terminalEscape && !sistemaDeEscape.sistemaEscape && !sistemaDeEscape.crossOver && !sistemaDeEscape.downpipe && !sistemaDeEscape.silenciador && !sistemaDeEscape.resonador && !sistemaDeEscape.juntasFlexibles && !sistemaDeEscape.headers) {
+    if (!sistemaDeEscape.terminalEscape && !sistemaDeEscape.sistemaEscape && !sistemaDeEscape.crossOver && !sistemaDeEscape.downpipe && !sistemaDeEscape.silenciador && !sistemaDeEscape.resonador && !sistemaDeEscape.juntasFlexibles && !sistemaDeEscape.headers && !sistemaDeEscape.catalizador) {
         // Si todas las propiedades son nulas, no muestres el modal y termina la ejecución de la función
         return;
     }
@@ -211,6 +181,8 @@ var nombresProductos = {
     'sistema-escape-2' : 'Axle Back',
     'crossover-1': 'X- Pipe',
     'crossover-2': 'H-Pipe',
+    'catalizador-1' : 'Catalizador de Alto Flujo',
+    'catalizador-2' : 'Catalizador de Alto Flujo',
 };
 
 document.getElementById('cotizar-mensaje').addEventListener('click', function(e) {
