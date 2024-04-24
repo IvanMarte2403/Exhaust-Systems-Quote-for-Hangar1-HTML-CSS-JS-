@@ -56,12 +56,6 @@ enlaces.forEach(function(enlace) {
     });
 
 
-// ==============================================================   
-  
-
-
-
-
 
 // =====================Aplicaciones del botón de Cotizar=====================
 var rutasImagenes = {

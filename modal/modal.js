@@ -245,5 +245,3 @@ iconoResonador.forEach(function(icono) {
       });
   });
 
-
- 
