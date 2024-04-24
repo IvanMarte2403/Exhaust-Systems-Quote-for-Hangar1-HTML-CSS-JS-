@@ -1,9 +1,44 @@
 
+var iconoSistemaDeEscape = document.querySelectorAll('#modal-' + tipoAuto + '-producto-sistema-de-escape i');
+
+
+
+// ======Sistema de Escape======
+
+
+iconoSistemaDeEscape.forEach(function(icono) {
+icono.addEventListener('click', function() {
+    // Obten el id del icono
+    var idIcono = icono.id;
+
+    // Si el producto ya fue seleccionado, deseleccionarlo
+    if (sistemaDeEscape.sistemaEscape === idIcono) {
+        sistemaDeEscape.sistemaEscape = null;
+        icono.classList.remove('fa-check');
+        icono.classList.add('fa-plus');
+        icono.style.color = '';
+    } else {
+        // Si otro producto fue seleccionado previamente, deseleccionarlo
+        if (sistemaDeEscape.sistemaEscape) {
+            var iconoAnterior = document.getElementById(sistemaDeEscape.sistemaEscape);
+            iconoAnterior.classList.remove('fa-check');
+            iconoAnterior.classList.add('fa-plus');
+            iconoAnterior.style.color = '';
+        }
+
+        // Seleccionar el nuevo producto
+        sistemaDeEscape.sistemaEscape = idIcono;
+        icono.classList.remove('fa-plus');
+        icono.classList.add('fa-check');
+        icono.style.color = 'green';
+    }
+}); 
+});
 
 
 // ==========Crossoverr==========
 
-var iconosCrossOver = document.querySelectorAll('#modal-Godin-producto-crossover i');
+var iconosCrossOver = document.querySelectorAll('#modal-' + tipoAuto + '-producto-crossover i');
 
 iconosCrossOver.forEach(function(icono) {
     icono.addEventListener('click', function() {
@@ -38,7 +73,7 @@ iconosCrossOver.forEach(function(icono) {
 
 // ======Catalizador=======
 
-var iconosCatalizador = document.querySelectorAll('#modal-Godin-producto-catalizadores-de-alto-flujo i');
+var iconosCatalizador = document.querySelectorAll('#modal-' + tipoAuto + '-producto-catalizadores-de-alto-flujo i');
 
 iconosCatalizador.forEach(function(icono) {
     icono.addEventListener('click', function() {
@@ -72,7 +107,7 @@ iconosCatalizador.forEach(function(icono) {
 // ========Downpipe=========
 
 
-var iconosDownpipe = document.querySelectorAll('#modal-Godin-producto-downpipe i');
+var iconosDownpipe = document.querySelectorAll('#modal-' + tipoAuto + '-producto-downpipe i');
 
 iconosDownpipe.forEach(function(icono) {
     icono.addEventListener('click', function() {
@@ -108,7 +143,7 @@ iconosDownpipe.forEach(function(icono) {
 
 
 
-var iconosSilenciadores = document.querySelectorAll('#modal-Godin-producto-silenciador i');
+var iconosSilenciadores = document.querySelectorAll('#modal-' + tipoAuto + '-producto-silenciador i');
 
 iconosSilenciadores.forEach(function(icono) {
     icono.addEventListener('click', function() {
@@ -144,7 +179,7 @@ iconosSilenciadores.forEach(function(icono) {
 
 
 
-var iconoResonador = document.querySelectorAll('#modal-Godin-producto-resonador i');
+var iconoResonador = document.querySelectorAll('#modal-' + tipoAuto + '-producto-resonador i');
 
 iconoResonador.forEach(function(icono) {
     icono.addEventListener('click', function() {
@@ -174,3 +209,41 @@ iconoResonador.forEach(function(icono) {
         }       
     });
 });
+
+
+
+  // ========Sistemas de Escape Godin=========
+
+  var iconos = document.querySelectorAll('#modal-' + tipoAuto + '-producto-terminales i');
+
+  iconos.forEach(function(icono) {
+      icono.addEventListener('click', function() {
+          // Obten el id del icono
+          var idIcono = icono.id;
+  
+          // Si el producto ya fue seleccionado, deseleccionarlo
+          if (sistemaDeEscape.terminalEscape === idIcono) {
+              sistemaDeEscape.terminalEscape = null;
+              icono.classList.remove('fa-check');
+              icono.classList.add('fa-plus');
+              icono.style.color = '';
+          } else {
+              // Si otro producto fue seleccionado previamente, deseleccionarlo
+              if (sistemaDeEscape.terminalEscape) {
+                  var iconoAnterior = document.getElementById(sistemaDeEscape.terminalEscape);
+                  iconoAnterior.classList.remove('fa-check');
+                  iconoAnterior.classList.add('fa-plus');
+                  iconoAnterior.style.color = '';
+              }
+  
+              // Seleccionar el nuevo producto
+              sistemaDeEscape.terminalEscape = idIcono;
+              icono.classList.remove('fa-plus');
+              icono.classList.add('fa-check');
+              icono.style.color = 'green';
+          }
+      });
+  });
+
+
+ 
