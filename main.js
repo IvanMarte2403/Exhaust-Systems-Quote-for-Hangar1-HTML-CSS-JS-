@@ -130,7 +130,9 @@ var rutasImagenes = {
     terminalEscape: 'productos/terminales/',
     sistemaEscape: 'productos/sistema-de-escape/',
     crossOver: 'productos/crossover/',
-    catalizador: 'productos/catalizadores/'
+    catalizador: 'productos/catalizadores/',
+    downpipe: 'productos/downpipe/',
+    silenciador: 'productos/silenciadores/',
     // Agrega aquí las rutas para las demás propiedades si las necesitas
 };
 
