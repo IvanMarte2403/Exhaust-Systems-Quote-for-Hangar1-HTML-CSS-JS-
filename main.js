@@ -133,6 +133,7 @@ var rutasImagenes = {
     catalizador: 'productos/catalizadores/',
     downpipe: 'productos/downpipe/',
     silenciador: 'productos/silenciadores/',
+    resonador: 'productos/resonadores/',
     // Agrega aquí las rutas para las demás propiedades si las necesitas
 };
 

@@ -138,3 +138,39 @@ iconosSilenciadores.forEach(function(icono) {
         }       
     });
 });
+
+
+// ==========Resonador De Alto Flujo============
+
+
+
+var iconoResonador = document.querySelectorAll('#modal-Godin-producto-resonador i');
+
+iconoResonador.forEach(function(icono) {
+    icono.addEventListener('click', function() {
+        // Obten el id del icono
+        var idIcono = icono.id;
+
+        // Si el producto ya fue seleccionado, deseleccionarlo
+        if (sistemaDeEscape.resonador === idIcono) {
+            sistemaDeEscape.resonador = null;
+            icono.classList.remove('fa-check');
+            icono.classList.add('fa-plus');
+            icono.style.color = '';
+        } else {
+            // Si otro producto fue seleccionado previamente, deseleccionarlo
+            if (sistemaDeEscape.resonador) {
+                var iconoAnterior = document.getElementById(sistemaDeEscape.resonador);
+                iconoAnterior.classList.remove('fa-check');
+                iconoAnterior.classList.add('fa-plus');
+                iconoAnterior.style.color = '';
+            }
+
+            // Seleccionar el nuevo producto
+            sistemaDeEscape.resonador  = idIcono;
+            icono.classList.remove('fa-plus');
+            icono.classList.add('fa-check');
+            icono.style.color = 'green';
+        }       
+    });
+});
